@@ -1,0 +1,3 @@
+pyyaml>=6.0
+# Optional: uncomment for live API testing
+# openai>=1.0

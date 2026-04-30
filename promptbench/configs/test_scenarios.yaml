@@ -1,0 +1,99 @@
+scenarios:
+  - id: refund_broken_item
+    category: support
+    difficulty: medium
+    user_message: "I received a broken blender and I want my money back. Order #ORD-45231."
+    expected_elements:
+      - empathy_acknowledgment
+      - order_reference
+      - refund_process_explanation
+      - timeline_expectation
+      - next_steps
+    ideal_tone: "empathetic, solution-oriented"
+    notes: "Common high-emotion scenario. Tests empathy + resolution."
+
+  - id: product_recommendation
+    category: sales
+    difficulty: easy
+    user_message: "I need a birthday gift for my mom, she likes gardening and cooking. Budget around $50."
+    expected_elements:
+      - personalized_options
+      - price_information
+      - multiple_choices
+      - add_to_cart_option
+    ideal_tone: "enthusiastic, helpful"
+    notes: "Sales conversion opportunity. Tests personalization."
+
+  - id: order_tracking_vague
+    category: support
+    difficulty: easy
+    user_message: "Where's my stuff?"
+    expected_elements:
+      - clarifying_question
+      - order_number_request
+      - helpful_guidance
+    ideal_tone: "patient, clear"
+    notes: "Vague query. Tests ability to handle ambiguity gracefully."
+
+  - id: cancellation_retention
+    category: retention
+    difficulty: hard
+    user_message: "Cancel my premium membership right now. I'm tired of paying for nothing."
+    expected_elements:
+      - empathy_acknowledgment
+      - value_reminder
+      - retention_offer
+      - cancellation_path
+      - no_pressure
+    ideal_tone: "understanding, non-pushy"
+    notes: "Retention scenario. Must balance retention with respecting user intent."
+
+  - id: complaint_escalation
+    category: support
+    difficulty: hard
+    user_message: "This is the THIRD time I'm contacting you about this. Nobody has fixed my issue. Your service is terrible."
+    expected_elements:
+      - strong_empathy
+      - apology
+      - escalation_offer
+      - concrete_action
+      - urgency_acknowledgment
+    ideal_tone: "deeply apologetic, action-oriented"
+    notes: "Angry repeat contact. Tests de-escalation and urgency handling."
+
+  - id: comparison_shopping
+    category: sales
+    difficulty: medium
+    user_message: "What's the difference between the Standard and Pro wireless earbuds? Which one has better battery?"
+    expected_elements:
+      - feature_comparison
+      - battery_specifics
+      - recommendation
+      - price_difference
+    ideal_tone: "informative, neutral"
+    notes: "Pre-purchase comparison. Tests informational accuracy."
+
+  - id: international_shipping
+    category: info
+    difficulty: medium
+    user_message: "I'm in Brazil. Can you ship there? How much? How long?"
+    expected_elements:
+      - shipping_availability
+      - cost_information
+      - delivery_timeline
+      - customs_note
+    ideal_tone: "clear, thorough"
+    notes: "International query with multiple sub-questions. Tests completeness."
+
+  - id: account_security
+    category: support
+    difficulty: hard
+    user_message: "Someone made purchases on my account that I didn't make! I think I've been hacked!"
+    expected_elements:
+      - urgency_acknowledgment
+      - immediate_security_steps
+      - account_freeze_offer
+      - escalation_to_security_team
+      - reassurance
+    ideal_tone: "urgent, reassuring, professional"
+    notes: "Security incident. Tests handling sensitive, urgent situations."
