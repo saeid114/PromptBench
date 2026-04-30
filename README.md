@@ -57,7 +57,7 @@ Test Scenarios (YAML)
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/promptbench.git
+git clone https://github.com/saeid114/promptbench.git
 cd promptbench
 pip install -r requirements.txt
 ```
